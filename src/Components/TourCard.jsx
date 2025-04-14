@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'; //Imports the react software
 
-function TourCard({id, name, info, price, image, onRemove}) {
+function TourCard({id, name, info, price, image, onRemove}) { //Created TourCard function
     const [readMore, setReadMore] = useState(false);
     return (
         <article className="tour-card">
@@ -12,12 +12,12 @@ function TourCard({id, name, info, price, image, onRemove}) {
                 <button onClick={() => setReadMore(!readMore)}>
                 {readMore ? "Show Less" : "Read More"}
                 </button>
-            </p>
+            </p> 
         <button className="btn-remove" onClick={() => {
            onRemove(id) 
         }}>Not Interested</button>
         </article>
     )
-}
+} //Establishes the structure of the Tour Card on the website and establishes the remove button
 
-export default TourCard;
+export default TourCard; //Exports the Tour Card to any file which imports it
