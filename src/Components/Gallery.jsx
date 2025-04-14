@@ -6,8 +6,10 @@ const TourList = ({tours, setTours, onRemove}) => {
     const [error, setError] = useState(false);
     useEffect(() => {
         fetch('https://course-api.com/react-tours-project')
-        .then(response => response.json())
-        .then(data => setTours(tours));
+        setLoading(true);
+        setError(false);
+        then(response => response.json())
+        then(data => setTours(tours));
     }, []);
     return (
         <ul>
@@ -18,6 +20,9 @@ const TourList = ({tours, setTours, onRemove}) => {
             ))}
         </ul>
     );
+catch (error) {
+    setError(true);
+};
 }
 
 export default TourList;
