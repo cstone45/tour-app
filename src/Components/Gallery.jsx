@@ -19,3 +19,5 @@ const TourList = ({tours, setTours, onRemove}) => {
         </ul>
     );
 }
+
+export default TourList;
