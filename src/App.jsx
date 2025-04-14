@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import TourList from "./Components/TourList"
+import TourList from "./Components/Gallery"
 
 function App() {
   const [tours, setTours] = useState([])
